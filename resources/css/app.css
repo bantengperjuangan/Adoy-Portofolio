@@ -1,0 +1,20 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: darkblue;
+}
+/* Membuat efek kartu terangkat saat di-hover mouse */
+.kartu-animasi {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.kartu-animasi:hover {
+    transform: translateY(-10px); /* Menggeser kartu ke atas 10 pixel */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15) !important; /* Menambah bayangan */
+    cursor: pointer;
+}
