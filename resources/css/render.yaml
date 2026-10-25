@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: portofolio-yoda
+    env: php
+    plan: free
+    buildCommand: "composer install && cp .env.example .env && php artisan key:generate"
+    startCommand: "php artisan config:cache && php artisan route:cache && apachectl -D FOREGROUND"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: true
+      - key: LOG_CHANNEL
+        value: stderr
